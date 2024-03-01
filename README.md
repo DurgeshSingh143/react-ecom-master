@@ -20,11 +20,10 @@ A full-stack eCommerce application built with React. The project aims to provide
 - Add products to the cart and manage cart items.
 - Checkout process with various payment options.
 - Order history and tracking.
-- Admin panel to manage products, categories, and orders.
 
 ## Demo
 
-[shopwithzosh](https://react-ecom-master.vercel.app/)
+[E-Commerce Project](https://react-ecom-master.vercel.app/)
 
 ## Technologies Used
 
@@ -53,7 +52,5 @@ If you have any questions or suggestions, feel free to contact me:
 - Durgesh Singh Solanki
 - durgeshsinghsolanki181@gmail.com
 - [Linkedin](https://www.linkedin.com/in/durgesh-singh-solanki-softwareengineer/)
-
-Feel free to customize the README to include more specific information about your project. Good luck with your eCommerce full-stack application!
 
 
