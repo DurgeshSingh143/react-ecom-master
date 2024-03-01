@@ -1,112 +1,59 @@
-### :handbag: 
+# E-Commerce Full Stack Project
+
+## Description
+
+A full-stack eCommerce application built with React. The project aims to provide users with a seamless online shopping experience, featuring a responsive and user-friendly interface, a wide range of products, and secure payment options.
+
+## Table of Contents
+
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
 
 ## Features
 
-<b>Products Features</b>
+- User registration and authentication.
+- Browse through a variety of products in different categories.
+- Add products to the cart and manage cart items.
+- Checkout process with various payment options.
+- Order history and tracking.
+- Admin panel to manage products, categories, and orders.
 
-| Feature  |  Coded?       | Description  |
-|----------|:-------------:|:-------------|
-| Add a Product | &#10004; | Ability of Add a Product on the System |
-| List Products | &#10004; | Ability of List Products |
-| Edit a Product | &#10004; | Ability of Edit a Product |
-| Delete a Product | &#10004; | Ability of Delete a Product |
-| Stock | &#10004; | Ability of Update the Stock |
-| Stock History | &#10004; | Ability to see the Stock History |
+## Demo
 
-<b>Purchase Features</b>
+[shopwithzosh](https://react-ecom-master.vercel.app/)
 
-| Feature  |  Coded?       | Description  |
-|----------|:-------------:|:-------------|
-| Create a Cart | &#10004; | Ability of Create a new Cart |
-| See Cart | &#10004; | Ability to see the Cart and it items |
-| Remove a Cart | &#10004; | Ability of Remove a Cart |
-| Add Item | &#10004; | Ability of add a new Item on the Cart |
-| Remove a Item | &#10004; | Ability of Remove a Item from the Cart |
-| Checkout | &#10004; | Ability to Checkout |
+## Technologies Used
 
-# eCommerce
-
-**eCommerce** it's an open source (test scenario) software made to create a easy and simple "Shop" API, where you have two micro services, one the **Products API** that stores and handles everything Related to Stock and Products. And the **Purchase API** where you can create orders (cart's) and checkout items.
-
-The purpose of this repository it's for education and test. But the code it's being coded in a proper way.
-
-## Documentation
-
-**eCommerce** has a full API documentation made with [Swagger](https://swagger.io), you can check it by accessing [this](http://santoro.pw/eCommerce) link.
-
-If you have any **Issue** or bug you can submit a new Issue by accessing [this](issues/) link.
-
-If you want to **Contribute** you can submit a Pull Request, remember to READ the [Contributing Guide](CONTRIBUTING.md)
+- Frontend:
+  - React: JavaScript library for building user interfaces.
+  - Redux: State management library for React applications.
+  - HTML/CSS: Markup and styling of the application.
+  - Axios: HTTP client for making API requests.
+  - MUI: CSS components library.
+  - Tailwind Css.
 
 ## Installation
 
-* **eCommerce** it's splitted into two standalone RESTful API's, so you can run it on whatever port you want. Installing 
-* **eCommerce** it's easy, the tutorial above will explain to you.
-* **eCommerce** uses Groovy `2.4` and Grails `3.2.11`.
+1. Clone Frontend repository: `git clone https://github.com/DurgeshSingh143/react-ecom-master.git`
+2. Change directory Frontend:`cd react-ecom-master`
+3. Install frontend dependencies: `npm install`
 
-You can run **eCommerce** in different ways. You can go to the [Releases Page](releases/) and download the source code of the latest release, or a bundled .war or a standalone java application (.jar).
+## Usage
 
-**It's recommend see the notes on [this](#notes) section.**
+1. Start the frontend application: `npm start`
 
-### Development
+## Contact
 
-You can attach the .war in WebServers like **Tomcat** using the Management Interface.
+If you have any questions or suggestions, feel free to contact me:
 
-If you want run the standalone `.jar` just download it, and open your CMD/Terminal and write:
+- Durgesh Singh Solanki
+- durgeshsinghsolanki181@gmail.com
+- [Linkedin](https://www.linkedin.com/in/durgesh-singh-solanki-softwareengineer/)
 
-**If you want RUN the Products API**
+Feel free to customize the README to include more specific information about your project. Good luck with your eCommerce full-stack application!
 
-`java -jar ecommerce-products-api-XXX.jar` **OR** `./products-api/grailsw run-app`
 
-**If you want RUN the Purchases API**
-
-`java -jar ecommerce-purchase-api-XXX.jar` **OR** `./purchase-api/grailsw run-app`
-
-You also can build from the sources by running the **Grails Console**, just went to one of the API's folder `purchase-api` or `products-api` and write on your CMD/Terminal the following:
-
-`grailsw assemble`
-
-If you want to run it in development scenario, you can also do it by **building** the sources. You have two manner to do it. You can Gradle or directly Grails. Both `products-api` and `purchase-api` comes with Groovy, Grails and Gradle standalone packages. So you can run it without the need of installing they.
-
-**Option #1 - Run by Gradle**
-
-`gradlew bootRun`
-
-**Option #2 - Run by Grailsw**
-
-`grailsw run-app`
-
-### Production
-
-Production Environments are focused in being ready. That means, you just need execute the Jar File.
-
-In the Production Environment all eCommerce API's are configured to work with **MySQL** in two databases; **productsAPI** and **purchaseAPI** and to work with a default **username and password** combination:
-
-**Note.:** Remember importing each SQL files, if using MySQL for Production. You can find them inside `products-api/src/main/sql/` and `purchase-api/src/main/sql/`
-
-* **Username:** commerce
-* **Password:** commerceapi
-* **Database:** productsapi & purchaseapi
-* **Port:** 3306
-
-You can change those credentials in the `application.yaml` file. In production environments **you need import the database schema** before running the software. Both `products-api` and `purchase-api` DDL files are available on [this](sql/) folder.
-
-### Notes
-
-**Note.:** By default `products-api` runs on port 8080 and `purchase-api` on port 8090.
-
-**Note.:** In all Development and Test Scenarios, eCommerce uses **H2** in-memory Database.
-
-**Note.:** You can change your database credentials both for development/test and production scenarios in the `app-config.yml` available on each API sources root. Those configuration files can be used also externally, after building the `.jar`
-
-**Note.:** You also can clean the sources and rebuild the sources by running `grailsw clean`
-
-## Running Test Cases
-
-You can easily run the **Test Cases** using the standalone Grails package built-in with both the API's. Just went to the home folder of one of them (`products-api` or `purchase-api`). And write on your CMD/Terminal:
-
-`grailsw test-app`
-
-## Credits
-
-This development/educational scenario was coded and created by [Claudio Santoro](http://santoro.pw) unde the [GNU GPL v3](LICENSE) License. The objective of this repository it's as practical test of RESTful API's with Java + Groovy.
